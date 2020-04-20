@@ -1,0 +1,71 @@
+@model IEnumerable<UserDetail>
+<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<style>
+    dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: #333;
+    float: left;
+}
+</style>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <table class="table table-bordered" id="myTable">
+            <thead>                
+                    <th width="100px">UserName</th>
+                    <th>Photo</th>
+                    <th width="70px">CV</th>
+                    <th>View</th>
+                    <th>Edit</th>
+                    <th>Delete</th>            
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Username</td>
+                            <td>
+                                <img src="~/uploads/img/@item.ProfileImage" width="70px" height="70px">
+                            </td>
+                            <td>@item.Resume</td>
+                            <td><button type="button" class="btn btn-link" value="@item.Id" id="load"> View</button></td>
+                            <td>@Html.ActionLink("Edit","Edit","Home",new {id=@item.Id})</td>
+                            <td>@Html.ActionLink("Delete","Delete","Home",new {id=@item.Id})</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="viewModal" role="dialog">
+     <div class="modal-dialog" role="document">
+        <div class="modal-content" id="data">
+             
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>    
+<script>
+    $(document).ready( function () {
+        $.noConflict();
+        $('#myTable').DataTable({
+            paging: false,
+            ordering:  false,
+            "bInfo" : false
+        });
+        
+        $("#load").on('click',function(){
+            $("#viewModal").modal("show");
+            $.ajax({
+                url:"View/"+$(this).val(),
+                type:"GET",
+                success:function(res){
+                    $("#data").html(res);
+                }
+            });
+        });        
+    });
+</script>

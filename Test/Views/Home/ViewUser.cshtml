@@ -1,0 +1,34 @@
+@model Test.Models.UserDetail
+@{
+    Layout=null;
+}
+<div class="modal-body">
+      <div class="row justify-content-center">
+          <table class="table table-borderless">
+              <tr>
+                  <td>ID</td>
+                  <td>@Model.Id</td>
+              </tr>
+              <tr>
+                  <td>UserName</td>
+                  <td>@Model.Username</td>
+              </tr>
+              <tr>
+                  <td>Password</td>
+                  <td>@Model.Password</td>
+              </tr>
+              <tr>
+                  <td>Pofile Photo</td>
+                  <td><img src="~/uploads/img/@Model.ProfileImage" height="100px" width="100px"></td>
+              </tr>
+              <tr>
+                  <td>Curriculam Vitae</td>
+                  <td>@Model.Resume</td>
+              </tr>
+              <tr>
+                  <td>Mobile Number</td>
+                  <td>@Model.MobileNumber</td>
+              </tr>
+          </table>          
+      </div>          
+</div>

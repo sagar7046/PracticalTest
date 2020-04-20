@@ -20531,13 +20531,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Home\\ViewUser.cshtml",
+      "TargetPath": "Views\\Home\\ViewUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Home\\SaveDetail.cshtml",
+      "TargetPath": "Views\\Home\\SaveDetail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Home\\Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\OceanTech\\Desktop\\Test\\PracticalTest\\Test\\Views\\Home\\Operation.cshtml",
+      "TargetPath": "Views\\Home\\Operation.cshtml",
       "FileKind": "mvc"
     },
     {
